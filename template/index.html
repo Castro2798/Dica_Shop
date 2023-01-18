@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Spice UP</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+</head>
+
+<body>
+  <canvas id="pag" width="10" height="2"></canvas>
+  <script>
+      var data = {"type": "horizontalBar", "data": {"labels": ["DEBITO ELO", "DINHEIRO"], "datasets": [{"label": "Valor Recebido", "data": [135.3, 190.37], "fill": false, "pointBorderWidth": 10, "pointRadius": 3, "backgroundColor": "rgba(60, 180, 75, 1.0)"}]}, "options": {"plugins": {}}}
+      var ctx = document.getElementById("pag").getContext('2d')
+      var myChart = new Chart(ctx, data);
+  </script>
+</body>
+
+</html>

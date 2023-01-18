@@ -4,8 +4,13 @@ import jinja2
 import os
 from pathlib import Path
 
+from consultas import ConsultaPagamento,ConsultaProdVendido
+
 TPREC=[]
 VLRECEBIDO=[]
+
+PROD=[]
+VLITEM=[]
 
 class MyBarGraph(BaseChart):
     type = ChartType.HorizontalBar
@@ -35,14 +40,9 @@ def conecta():
                      user=user[9::],
                      password=password[9::])
     cur = con.cursor()
-    sql = """SELECT rec.dstprec AS pagamento,
-                    sum(mc.vl_valor) AS valor
-                    FROM spice.movimento_caixa AS mc
-                    INNER JOIN spice.tprec AS rec
-                    ON mc.id_tipo_recebimento = rec.idtprec
-                    GROUP BY idtprec
-                    ORDER BY valor"""
-    cur.execute(sql)
+    sql = ConsultaPagamento()
+    cur.execute(sql.getConPag())
+    print(sql.getConPag())
     con.commit()
     recset = cur.fetchall()
     con.close()
@@ -53,7 +53,6 @@ def conecta():
         x=x+1
     iniciaDash()
 
-
 def iniciaDash():
     chart = MyBarGraph()
     dir = os.path.dirname(os.path.abspath(__file__))
@@ -61,11 +60,10 @@ def iniciaDash():
     env = jinja2.Environment(loader=jinja2.FileSystemLoader(template))
     html = env.get_template('template.html')
     page = os.path.join(dir, 'html', 'template.html')
-    renderedPage = html.render(title='Dash Spice', chartJSON=chart.get())
+    renderedPag = html.render(title='Dash Spice', chartPag=chart.get())
     outputFileName = Path('template/index.html')
     with open(outputFileName, 'w') as outputFile:
-        outputFile.write(renderedPage)
+        outputFile.write(renderedPag)
 
 conecta()
-
 

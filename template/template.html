@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Spice UP</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+</head>
+
+<body>
+  <canvas id="pag" width="10" height="2"></canvas>
+  <script>
+      var data = {{ chartPag | safe }}
+      var ctx = document.getElementById("pag").getContext('2d')
+      var myChart = new Chart(ctx, data);
+  </script>
+</body>
+
+</html>
