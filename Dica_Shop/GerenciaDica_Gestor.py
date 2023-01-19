@@ -45,7 +45,6 @@ def filtraDica():
 
 def listarDados():
     global LISTA, DT_FINAL, DT_FINAL, TIPO_DICA
-    print(TIPO_DICA)
     LISTA = dbPost.consulta_db("SELECT "
                                "codigo,"
                                "processo,"
