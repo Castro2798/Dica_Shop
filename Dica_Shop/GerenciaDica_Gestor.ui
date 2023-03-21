@@ -32,14 +32,18 @@
   <property name="autoFillBackground">
    <bool>false</bool>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(150, 150, 150);
+border-radius: 10px;</string>
+  </property>
   <widget class="QTableWidget" name="tableWidget">
    <property name="enabled">
     <bool>true</bool>
    </property>
    <property name="geometry">
     <rect>
-     <x>9</x>
-     <y>14</y>
+     <x>10</x>
+     <y>63</y>
      <width>981</width>
      <height>246</height>
     </rect>
@@ -51,6 +55,9 @@
      <strikeout>false</strikeout>
      <kerning>true</kerning>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::Panel</enum>
@@ -80,13 +87,13 @@
     <bool>false</bool>
    </property>
    <property name="showDropIndicator" stdset="0">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="dragDropOverwriteMode">
     <bool>false</bool>
    </property>
    <property name="alternatingRowColors">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="selectionMode">
     <enum>QAbstractItemView::ExtendedSelection</enum>
@@ -122,7 +129,7 @@
     <number>10</number>
    </attribute>
    <attribute name="horizontalHeaderDefaultSectionSize">
-    <number>125</number>
+    <number>110</number>
    </attribute>
    <attribute name="horizontalHeaderHighlightSections">
     <bool>false</bool>
@@ -136,6 +143,9 @@
    <attribute name="verticalHeaderVisible">
     <bool>false</bool>
    </attribute>
+   <attribute name="verticalHeaderCascadingSectionResizes">
+    <bool>true</bool>
+   </attribute>
    <attribute name="verticalHeaderMinimumSectionSize">
     <number>10</number>
    </attribute>
@@ -143,66 +153,108 @@
     <number>10</number>
    </attribute>
    <attribute name="verticalHeaderHighlightSections">
-    <bool>true</bool>
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderStretchLastSection">
+    <bool>false</bool>
    </attribute>
    <column>
     <property name="text">
      <string>Código</string>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
     </property>
    </column>
    <column>
     <property name="text">
      <string>Processo</string>
     </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
+    </property>
    </column>
    <column>
     <property name="text">
      <string>Data</string>
+    </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
     </property>
    </column>
    <column>
     <property name="text">
      <string>Título</string>
     </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
+    </property>
    </column>
    <column>
     <property name="text">
      <string>Sistema</string>
+    </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
     </property>
    </column>
    <column>
     <property name="text">
      <string>Versão do Sistema</string>
     </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
+    </property>
    </column>
    <column>
     <property name="text">
      <string>Módulo</string>
+    </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
     </property>
    </column>
    <column>
     <property name="text">
      <string>Versão do Módulo</string>
     </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
+    </property>
    </column>
    <column>
     <property name="text">
      <string>Tipo da Dica</string>
+    </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
     </property>
    </column>
    <column>
     <property name="text">
      <string>Dúvida/Problema</string>
     </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
+    </property>
    </column>
    <column>
     <property name="text">
      <string>Resolução</string>
     </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
+    </property>
    </column>
    <column>
     <property name="text">
      <string>Comentário</string>
+    </property>
+    <property name="textAlignment">
+     <set>AlignCenter</set>
     </property>
    </column>
   </widget>
@@ -211,9 +263,19 @@
     <rect>
      <x>11</x>
      <y>364</y>
-     <width>37</width>
+     <width>61</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(14, 100, 180);
+</string>
    </property>
    <property name="text">
     <string>Sistema</string>
@@ -243,15 +305,31 @@
      <bold>true</bold>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
      <x>341</x>
      <y>364</y>
-     <width>37</width>
+     <width>61</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(14, 100, 180);
+</string>
    </property>
    <property name="text">
     <string>Módulo</string>
@@ -287,15 +365,31 @@
      <bold>true</bold>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
      <x>671</x>
      <y>364</y>
-     <width>91</width>
+     <width>111</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(14, 100, 180);
+</string>
    </property>
    <property name="text">
     <string>Versão do Módulo</string>
@@ -307,9 +401,9 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>670</x>
+     <x>671</x>
      <y>381</y>
-     <width>110</width>
+     <width>120</width>
      <height>20</height>
     </rect>
    </property>
@@ -325,6 +419,12 @@
      <bold>true</bold>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
@@ -334,6 +434,16 @@
      <width>131</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(14, 100, 180);
+</string>
    </property>
    <property name="text">
     <string>Versão do Sistema</string>
@@ -363,6 +473,12 @@
      <bold>true</bold>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
   <widget class="QLineEdit" name="titulo">
    <property name="enabled">
@@ -388,6 +504,12 @@
      <bold>true</bold>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
   </widget>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
@@ -397,6 +519,16 @@
      <width>131</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(14, 100, 180);
+</string>
    </property>
    <property name="text">
     <string>Título</string>
@@ -414,6 +546,9 @@
      <height>170</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
   </widget>
   <widget class="QTextBrowser" name="resolucao">
    <property name="enabled">
@@ -426,6 +561,9 @@
      <width>320</width>
      <height>170</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="html">
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -444,6 +582,16 @@ p, li { white-space: pre-wrap; }
      <height>16</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(14, 100, 180);
+</string>
+   </property>
    <property name="text">
     <string>Dúvida/Problema</string>
    </property>
@@ -456,6 +604,16 @@ p, li { white-space: pre-wrap; }
      <width>190</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(14, 100, 180);
+</string>
    </property>
    <property name="text">
     <string>Resolução</string>
@@ -470,6 +628,16 @@ p, li { white-space: pre-wrap; }
      <height>16</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(14, 100, 180);
+</string>
+   </property>
    <property name="text">
     <string>Comentário</string>
    </property>
@@ -483,6 +651,14 @@ p, li { white-space: pre-wrap; }
      <height>23</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt Arial;
+border-radius: 10px;
+color: white;
+background-color:
+qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2198c0, stop: 1 #0d5ca6);
+</string>
+   </property>
    <property name="text">
     <string>Comentar</string>
    </property>
@@ -490,14 +666,33 @@ p, li { white-space: pre-wrap; }
   <widget class="QCheckBox" name="checkBox">
    <property name="geometry">
     <rect>
-     <x>670</x>
+     <x>672</x>
      <y>613</y>
-     <width>70</width>
+     <width>81</width>
      <height>17</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(14, 100, 180);
+</string>
+   </property>
    <property name="text">
     <string>Resolvido</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="tristate">
+    <bool>false</bool>
    </property>
   </widget>
   <widget class="QPlainTextEdit" name="comentario">
@@ -506,8 +701,11 @@ p, li { white-space: pre-wrap; }
      <x>670</x>
      <y>430</y>
      <width>320</width>
-     <height>171</height>
+     <height>170</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_processo">
@@ -518,6 +716,16 @@ p, li { white-space: pre-wrap; }
      <width>140</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(14, 100, 180);
+</string>
    </property>
    <property name="text">
     <string>Processo</string>
@@ -547,15 +755,28 @@ p, li { white-space: pre-wrap; }
      <bold>true</bold>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 10px;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
   <widget class="QDateEdit" name="dtInicial">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>286</y>
+     <x>12</x>
+     <y>31</y>
      <width>110</width>
      <height>22</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
    <property name="displayFormat">
     <string notr="true">dd/MM/yyyy</string>
@@ -567,11 +788,17 @@ p, li { white-space: pre-wrap; }
   <widget class="QDateEdit" name="dtFinal">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>286</y>
+     <x>132</x>
+     <y>31</y>
      <width>110</width>
      <height>22</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
    <property name="displayFormat">
     <string notr="true">dd/MM/yyyy</string>
@@ -584,10 +811,21 @@ p, li { white-space: pre-wrap; }
    <property name="geometry">
     <rect>
      <x>260</x>
-     <y>288</y>
+     <y>33</y>
      <width>70</width>
      <height>17</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(150, 150, 150);
+color: rgb(14, 100, 180);
+</string>
    </property>
    <property name="text">
     <string>Dúvida</string>
@@ -597,10 +835,21 @@ p, li { white-space: pre-wrap; }
    <property name="geometry">
     <rect>
      <x>330</x>
-     <y>288</y>
-     <width>70</width>
+     <y>33</y>
+     <width>80</width>
      <height>17</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(150, 150, 150);
+color: rgb(14, 100, 180);
+</string>
    </property>
    <property name="text">
     <string>Problema</string>
@@ -609,11 +858,21 @@ p, li { white-space: pre-wrap; }
   <widget class="QLabel" name="label_9">
    <property name="geometry">
     <rect>
-     <x>11</x>
-     <y>269</y>
+     <x>104</x>
+     <y>14</y>
      <width>47</width>
      <height>13</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(14, 100, 180);
+</string>
    </property>
    <property name="text">
     <string>Período</string>
@@ -622,14 +881,61 @@ p, li { white-space: pre-wrap; }
   <widget class="QPushButton" name="filtrar">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>285</y>
+     <x>700</x>
+     <y>30</y>
      <width>75</width>
      <height>23</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt Arial;
+border-radius: 10px;
+color: white;
+background-color:
+qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2198c0, stop: 1 #0d5ca6);
+</string>
+   </property>
    <property name="text">
     <string>Filtrar</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>529</x>
+     <y>14</y>
+     <width>47</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(14, 100, 180);
+</string>
+   </property>
+   <property name="text">
+    <string>Sistema</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="sistemaFiltro">
+   <property name="geometry">
+    <rect>
+     <x>412</x>
+     <y>30</y>
+     <width>280</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
  </widget>

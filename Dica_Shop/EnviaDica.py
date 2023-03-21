@@ -71,10 +71,10 @@ def persistirDica(dica:Dica):
     dica.processo = telaProcesso.cdProcesso.text()
     insert = dbPost.insert_db("INSERT INTO gerenciador.gerenciador "
                               "(titulo, dt_dica, sistema, versao_sistema, modulo, "
-                              "versao_modulo, problema, resolucao, st_problema, processo) VALUES ('" + dica.titulo +
+                              "versao_modulo, problema, resolucao, st_problema, comentario, processo, st_resolvido) VALUES ('" + dica.titulo +
                               "', '" + dica.data + "', '" + dica.sistema + "', '" + dica.verSistema +
                               "', '" + dica.modulo + "', '" + dica.verModulo + "', '" + dica.problema +
-                              "', '" + dica.resolucao + "', '" + dica.tipoDuvida + "', '" + dica.processo + "');")
+                              "', '" + dica.resolucao + "', '" + dica.tipoDuvida + "', '', '" + dica.processo + "', False);")
     limpaTela()
     telaProcesso.close()
     msgSucesso()
