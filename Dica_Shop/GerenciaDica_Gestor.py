@@ -34,7 +34,7 @@ def limpaDica():
     resolucao = tela.resolucao.setText("")
     comentario = tela.comentario.setPlainText("")
     filtraDica()
-
+    print("OI")
 def filtraDica():
     global LISTA, DT_INICIAL, DT_FINAL, TIPO_DICA, SISTEMAFILTRO
 
@@ -152,7 +152,6 @@ tela.dtFinal.setDate(pd.Period(date, freq= 'M').end_time.date())
 
 tela.comentar.clicked.connect(comentaDica)
 tela.filtrar.clicked.connect(limpaDica)
-
 
 listarDados()
 app.exec()
